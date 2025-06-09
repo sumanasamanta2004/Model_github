@@ -24,3 +24,7 @@ print(iris.isnull().sum())
 
 #length of iris datasets
 print(len(iris))
+
+#2d plot
+iris.plot(kind='scatter', x='sepal_length', y='sepal_width')
+plt.show()
