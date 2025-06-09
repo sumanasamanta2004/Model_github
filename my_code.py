@@ -116,3 +116,9 @@ plt.title("Correlation Matrix of Iris Dataset")
 plt.show()
 
 
+#lable encoding
+from sklearn.preprocessing import LabelEncoder
+le= LabelEncoder()
+
+iris["species"]=le.fit_transform(iris["species"])
+print(iris.head())
