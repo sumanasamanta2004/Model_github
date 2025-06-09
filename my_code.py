@@ -97,3 +97,22 @@ plt.legend()
 plt.show()
 
 
+
+# Print correlation matrix (excluding non-numeric columns)
+corr_matrix = iris.select_dtypes(include=["number"]).corr()
+print(corr_matrix)
+
+
+# Set the plot size
+plt.figure(figsize=(8, 6))
+
+# Create heatmap
+sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
+
+# Add title
+plt.title("Correlation Matrix of Iris Dataset")
+
+# Show the plot
+plt.show()
+
+
