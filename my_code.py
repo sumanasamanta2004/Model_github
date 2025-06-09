@@ -124,9 +124,15 @@ iris["species"]=le.fit_transform(iris["species"])
 print(iris.head())
 
 
-# model traning 
+# Data split
 from sklearn.model_selection import train_test_split
 x=iris.drop(columns=["species"])
 y=iris["species"]
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.30)
 print(x)
+
+#Logistic regression
+from sklearn.linear_model import LogisticRegression
+model=LogisticRegression()
+model.fit(x_train, y_train)
+
