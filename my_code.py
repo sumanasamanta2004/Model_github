@@ -136,3 +136,6 @@ from sklearn.linear_model import LogisticRegression
 model=LogisticRegression()
 model.fit(x_train, y_train)
 
+#print metric to get performance
+print("Accuracy:",model.score(x_test, y_test))
+
