@@ -6,5 +6,12 @@ import numpy as np
 
 #Load Iris.csv into a pandas dataFrame.
 iris = pd.read_csv(r"C:\Users\suman\Downloads\iris.csv")
+
 # how many data-points and features?
 print (iris.shape)
+
+#What are the column names in our dataset?
+print (iris.columns)
+
+# see first 5 rows of the datasets
+print(iris.head())
