@@ -28,3 +28,72 @@ print(len(iris))
 #2d plot
 iris.plot(kind='scatter', x='sepal_length', y='sepal_width')
 plt.show()
+
+iris["sepal_length"].hist()
+
+# Show the plot
+plt.xlabel("Sepal Length")
+plt.ylabel("Frequency")
+plt.title("Histogram of Sepal Length")
+plt.show()
+
+colors = ["red","orange","blue"]
+species = ["setosa","versicolor","virginica"]
+
+
+#scatter plot of sepal length and sepal _width 
+for i in range(3):
+    x = iris[iris["species"] == species[i]]
+    plt.scatter(x["sepal_length"], x["sepal_width"], c=colors[i], label=species[i])
+# Add labels and legend
+plt.xlabel("Sepal Length")
+plt.ylabel("Sepal Width")
+plt.title("Sepal Length vs Width by Species")
+plt.legend()
+
+# Show plot
+plt.show()
+
+
+#scatter plot of petal_length and petal _width 
+for i in range(3):
+    x = iris[iris["species"] == species[i]]
+    plt.scatter(x["petal_length"], x["petal_width"], c=colors[i], label=species[i])
+# Add labels and legend
+plt.xlabel("petal Length")
+plt.ylabel("petal Width")
+plt.title("petal Length vs Width by Species")
+plt.legend()
+
+# Show plot
+plt.show()
+
+
+#scatter plot of sepal length and petal_length
+for i in range(3):
+    x = iris[iris["species"] == species[i]]
+    plt.scatter(x["sepal_length"], x["petal_length"], c=colors[i], label=species[i])
+# Add labels and legend
+plt.xlabel("Sepal Length")
+plt.ylabel("Petal Length")
+plt.title("Sepal Length vs Petal Length by Species")
+plt.legend()
+
+# Show plot
+plt.show()
+
+
+#scatter plot of sepal length and sepal _width 
+for i in range(3):
+    x = iris[iris["species"] == species[i]]
+    plt.scatter(x["sepal_width"], x["petal_width"], c=colors[i], label=species[i])
+# Add labels and legend
+plt.xlabel("Sepal Length")
+plt.ylabel("Sepal Width")
+plt.title("Sepal Width vs Petal Width by Species")
+plt.legend()
+
+# Show plot
+plt.show()
+
+
