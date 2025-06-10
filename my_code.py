@@ -2,6 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
+import joblib
  
 
 #Load Iris.csv into a pandas dataFrame.
@@ -139,3 +140,5 @@ model.fit(x_train, y_train)
 #print metric to get performance
 print("Accuracy:",model.score(x_test, y_test))
 
+# Save the trained model to a file
+joblib.dump(model, 'iris_model.pkl')
